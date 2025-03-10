@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Менеджер паролей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="auth">
+        <h2>Зарегестрироваться</h2>
+        <input type="text" id="reg-username" placeholder="Имя пользователя">
+        <input type="password" id="reg-password" placeholder="Пароль">
+        <button onclick="register()">Зарегестрироваться</button>
+
+        <h2>Войти</h2>
+        <input type="text" id="username" placeholder="Имя пользователя">
+        <input type="password" id="password" placeholder="Пароль">
+        <button onclick="login()">Войти</button>
+    </div>
+
+    <div id="manager" style="display: none;">
+        <h2>Менеджер паролей</h2>
+        <input type="text" id="service" placeholder="Сервис">
+        <input type="text" id="saved-password" placeholder="Пароль">
+        <div id="password-strength">
+            <div id="password-strength-bar"></div>
+            <p id="password-strength-text">Надежность пароля:</p>
+        </div>
+        <button onclick="savePassword()">Сохранить</button>
+
+        <h3>Мои пароли:</h3>
+        <pre id="password-list"></pre>
+
+        <h2>Генератор паролей</h2>
+        <input type="text" id="generated-password" readonly>
+        <button class = "btn" onclick="generatePassword()">Сгенерировать</button>
+        <button class = "btn" onclick="copyPassword()">Скопировать</button>
+
+        <button class = "btn" onclick="logout()">Выйти</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
